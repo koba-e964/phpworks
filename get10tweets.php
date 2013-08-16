@@ -20,7 +20,7 @@ $params=array(
 );
 //取得
 $tweets = (array) $cb->statuses_userTimeline($params);
-//array_pop($tweets);//最後の1件はステータスコードなので削除。
+$status_code=array_pop($tweets);//最後の1件はステータスコードなので削除。
 //出力
 foreach($tweets as $tweet){
     print "<!----- ";
@@ -29,5 +29,6 @@ foreach($tweets as $tweet){
     print "<p>" . $tweet->text . "</p>\r\n";
 }
 $endtime=microtime(true);
-print "time:".($endtime-$start)." sec";
+print "time:".($endtime-$start)." sec<br/>\r\n";
+print "status=$status_code<br/>\r\n";
 ?>
