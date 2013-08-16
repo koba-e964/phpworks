@@ -1,0 +1,192 @@
+Array
+(
+    [created_at] => Fri Aug 16 08:29:26 +0000 2013
+    [id] => 3.682883795882E+17
+    [id_str] => 368288379588202496
+    [text] => �x�m�R���ȁ[��������
+    [source] => <a href="https://twitter.com/kobae964/" rel="nofollow">test_app0</a>
+    [truncated] => 
+    [in_reply_to_status_id] => 
+    [in_reply_to_status_id_str] => 
+    [in_reply_to_user_id] => 
+    [in_reply_to_user_id_str] => 
+    [in_reply_to_screen_name] => 
+    [user] => stdClass Object
+        (
+            [id] => 625521669
+            [id_str] => 625521669
+            [name] => こば@ためひよ
+            [screen_name] => kobae964
+            [location] => kobavm
+            [description] => 数学や合唱やピアノやプログラミングをしている
+VMゆるふわ開発勢
+            [url] => http://t.co/bvOkHflCS0
+            [entities] => stdClass Object
+                (
+                    [url] => stdClass Object
+                        (
+                            [urls] => Array
+                                (
+                                    [0] => stdClass Object
+                                        (
+                                            [url] => http://t.co/bvOkHflCS0
+                                            [expanded_url] => http://ncneller.web.fc2.com/
+                                            [display_url] => ncneller.web.fc2.com
+                                            [indices] => Array
+                                                (
+                                                    [0] => 0
+                                                    [1] => 22
+                                                )
+
+                                        )
+
+                                )
+
+                        )
+
+                    [description] => stdClass Object
+                        (
+                            [urls] => Array
+                                (
+                                )
+
+                        )
+
+                )
+
+            [protected] => 
+            [followers_count] => 350
+            [friends_count] => 509
+            [listed_count] => 29
+            [created_at] => Tue Jul 03 10:18:57 +0000 2012
+            [favourites_count] => 4043
+            [utc_offset] => 32400
+            [time_zone] => Tokyo
+            [geo_enabled] => 1
+            [verified] => 
+            [statuses_count] => 16120
+            [lang] => ja
+            [contributors_enabled] => 
+            [is_translator] => 
+            [profile_background_color] => C0DEED
+            [profile_background_image_url] => http://a0.twimg.com/images/themes/theme1/bg.png
+            [profile_background_image_url_https] => https://si0.twimg.com/images/themes/theme1/bg.png
+            [profile_background_tile] => 
+            [profile_image_url] => http://a0.twimg.com/profile_images/378800000175685066/0dced07e6c3559c55edae1bcd85c2906_normal.png
+            [profile_image_url_https] => https://si0.twimg.com/profile_images/378800000175685066/0dced07e6c3559c55edae1bcd85c2906_normal.png
+            [profile_banner_url] => https://pbs.twimg.com/profile_banners/625521669/1369481411
+            [profile_link_color] => 0084B4
+            [profile_sidebar_border_color] => C0DEED
+            [profile_sidebar_fill_color] => DDEEF6
+            [profile_text_color] => 333333
+            [profile_use_background_image] => 1
+            [default_profile] => 1
+            [default_profile_image] => 
+            [following] => 
+            [follow_request_sent] => 
+            [notifications] => 
+        )
+
+    [geo] => stdClass Object
+        (
+            [type] => Point
+            [coordinates] => Array
+                (
+                    [0] => 35.36
+                    [1] => 138.73
+                )
+
+        )
+
+    [coordinates] => stdClass Object
+        (
+            [type] => Point
+            [coordinates] => Array
+                (
+                    [0] => 138.73
+                    [1] => 35.36
+                )
+
+        )
+
+    [place] => stdClass Object
+        (
+            [id] => 1b77da9af550bde3
+            [url] => https://api.twitter.com/1.1/geo/id/1b77da9af550bde3.json
+            [place_type] => city
+            [name] => 富士宮市
+            [full_name] => 富士宮市, 静岡県
+            [country_code] => JP
+            [country] => 日本
+            [bounding_box] => stdClass Object
+                (
+                    [type] => Polygon
+                    [coordinates] => Array
+                        (
+                            [0] => Array
+                                (
+                                    [0] => Array
+                                        (
+                                            [0] => 138.51216944444
+                                            [1] => 35.151569444444
+                                        )
+
+                                    [1] => Array
+                                        (
+                                            [0] => 138.74212416667
+                                            [1] => 35.151569444444
+                                        )
+
+                                    [2] => Array
+                                        (
+                                            [0] => 138.74212416667
+                                            [1] => 35.445651666667
+                                        )
+
+                                    [3] => Array
+                                        (
+                                            [0] => 138.51216944444
+                                            [1] => 35.445651666667
+                                        )
+
+                                )
+
+                        )
+
+                )
+
+            [attributes] => stdClass Object
+                (
+                )
+
+        )
+
+    [contributors] => 
+    [retweet_count] => 0
+    [favorite_count] => 0
+    [entities] => stdClass Object
+        (
+            [hashtags] => Array
+                (
+                )
+
+            [symbols] => Array
+                (
+                )
+
+            [urls] => Array
+                (
+                )
+
+            [user_mentions] => Array
+                (
+                )
+
+        )
+
+    [favorited] => 
+    [retweeted] => 
+    [lang] => es
+    [httpstatus] => 200
+)
+time:1.7000749111176 sec<br/>
