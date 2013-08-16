@@ -9,10 +9,9 @@ $path = 'C:\Users/Hiroki_Kobayashi/Documents/develop/php/codebird-php-2.4.1/src/
 set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 
 require("codebird.php");
-print "require_once success!:$start";
 
-Codebird::setConsumerKey($consumer_key, $consumer_secret);
-$cb = Codebird::getInstance();
+\Codebird\Codebird::setConsumerKey($consumer_key, $consumer_secret);
+$cb = \Codebird\Codebird::getInstance();
 $cb->setToken($access_token, $access_token_secret);
 //パラメータ
 $params=array(
@@ -21,10 +20,14 @@ $params=array(
 );
 //取得
 $tweets = (array) $cb->statuses_userTimeline($params);
-array_pop($tweets);//最後の1件はステータスコードなので削除。
+//array_pop($tweets);//最後の1件はステータスコードなので削除。
 //出力
 foreach($tweets as $tweet){
-    print "<p>" . $tweet->text . "</p>";
+    print "<!----- ";
+    print_r ($tweet);
+    print  "------>\r\n";
+    print "<p>" . $tweet->text . "</p>\r\n";
 }
 $endtime=microtime(true);
+print "time:".($endtime-$start)." sec";
 ?>
