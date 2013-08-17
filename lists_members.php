@@ -1,0 +1,40 @@
+<?php
+$start=microtime(true);
+$consumer_key = "30MDc4kbpD1T1IVrw0qw";
+$consumer_secret = "LyfPQewKoHH6XK2tKU19K1fhHGWK09jOtICyls8B9Q";
+$access_token = "625521669-EDdZfjZ4MPjML3jFskUe5GPd9oZ1SyqYTaIB35P6";
+$access_token_secret = "qqp5SRbJQLDP8AbkpQ8FJ4YGXB9lVwj9Ry2SEOYJs0";
+
+$path = 'C:\Users/Hiroki_Kobayashi/Documents/develop/php/codebird-php-2.4.1/src/';
+set_include_path(get_include_path() . PATH_SEPARATOR . $path);
+
+require("codebird.php");
+
+\Codebird\Codebird::setConsumerKey($consumer_key, $consumer_secret);
+$cb = \Codebird\Codebird::getInstance();
+$cb->setToken($access_token, $access_token_secret);
+
+$raw=$cb->lists_list(array('screen_name'=>'kobae964'));
+$lists=(array)$raw;
+$status=array_pop($lists);
+$nlist=count($lists);
+$i=0;
+foreach($lists as $list){
+	fputs(STDERR,$i.'/'.$nlist."\r\n");
+	$id=$list->id_str;
+	print('<p>list:name='.$list->name.' id='.$list->id_str."</p>\r\n");
+	$cursor=-1;
+	$maxiter=10;
+	do{
+		$result=$cb->lists_members(array('list_id'=>$id,'skip_status'=>true,'include_entities'=>false,'cursor'=>$cursor));
+		foreach($result->users as $user){
+				print('<p2>'.$user->id_str.' '.$user->screen_name."<p2/><br/>\r\n");
+		}
+		$cursor=$result->next_cursor_str;
+		$maxiter-=1;
+	}while($cursor!==0 && $maxiter>0);
+	$i++;
+}
+$end=microtime(true);
+print('time=<font color="red">'.($end-$start)."</font>\r\n");
+?>
