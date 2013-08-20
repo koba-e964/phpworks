@@ -1,7 +1,5 @@
 <html>
-<title>lists_list</title>
 <body>
-<form method="post" action="gui_lists_members_2.php">
 <?php
 $start=microtime(true);
 $consumer_key = "30MDc4kbpD1T1IVrw0qw";
@@ -18,23 +16,22 @@ require("codebird.php");
 $cb = \Codebird\Codebird::getInstance();
 $cb->setToken($access_token, $access_token_secret);
 
-
-$lists=(array)$cb->lists_list(array('screen_name'=>'kobae964'));
-array_pop($lists);
-
-
-foreach($lists as $list){
-	$enc=htmlspecialchars($list->name);
-	print('<input type="radio" name="list" value='.$enc.'>'.$enc."<br/>\n");
-}
-
-$end=microtime(true);
-?>
-<input type="submit" value="submit">
-
-</form>
-<?php
-print("<p2>".($end-$start)."sec<br/>\n");
+$listname=$_POST['list'];
+print('listname='.$listname."<br/>\n");
+$cursor=-1;
+$maxiter=10;
+do{
+	$result=$cb->lists_members(array('slug'=>$listname,
+	'owner_screen_name'=>'kobae964',
+	'skip_status'=>true,
+	'include_entities'=>false,
+	'cursor'=>$cursor));
+	foreach($result->users as $user){
+			print('<p2>'.$user->id_str.' '.$user->screen_name."<p2/><br/>\r\n");
+	}
+	$cursor=$result->next_cursor_str;
+	$maxiter-=1;
+}while($cursor!==0 && $maxiter>0);
 ?>
 </body>
 </html>
